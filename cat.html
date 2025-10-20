@@ -13,22 +13,27 @@
         }
     </style>
     <audio id="cat-audio" src="sounds/ear_killer.mp3" loop></audio>
+    <audio id = "john-cena" src = "sounds/ear-killer3.mp3" loop></audio>
     <script>
-        while (!window.confirm("Please allow pop-ups to continue. Click OK after enabling pop-ups.")) {
-            alert("Allow pop ups to continue");
-        }
-
-        const btn = document.createElement('button');
-        btn.textContent = 'Surprise';
-        btn.onclick = function() {
+        const btn1 = document.createElement('button');
+        btn1.textContent = 'Surprise';
+        btn1.onclick = function() {
             document.getElementById('cat-audio').play();
-            btn.remove();
-            while (true){
+            btn1.remove();
+            while (true) {
                 window.open('cat.html', '_blank');
             }
         };
 
-        document.body.appendChild(btn);
+        const btn2 = document.createElement('button');
+        btn2.textContent = 'Click Me, Trust';
+        btn2.onclick = function() {
+            document.getElementById('john-cena').play();
+            window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+        };
+
+        document.body.appendChild(btn1);
+        document.body.appendChild(btn2);
     </script>
 </head>
 <body>
