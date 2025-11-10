@@ -4,10 +4,6 @@ body {
     padding: 0;
     line-height: 1.6;
     background-color: #f4f4f4;
-    background-image: url('images/math.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,14 +11,6 @@ body {
     height: 100vh;
     position: relative;
     overflow-x: hidden;
-}
-
-body::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(244, 244, 244, 0.4);
-    z-index: -1;
 }
 
 h1 {
