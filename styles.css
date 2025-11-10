@@ -4,17 +4,33 @@ body {
     padding: 0;
     line-height: 1.6;
     background-color: #f4f4f4;
+    background-image: url('images/math.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(244, 244, 244, 0.4);
+    z-index: -1;
 }
 
 h1 {
     color: #454545;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem; 
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); 
     margin-top: 20px;
 }
 
@@ -22,7 +38,9 @@ h2 {
     color: #3987ad;
     font-weight: 600;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem; 
+    margin-top: 10px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 p {
@@ -31,11 +49,14 @@ p {
     max-width: 800px;
     margin: 0 auto 20px auto;
     padding: 0 10px;
+    color: #333;
+    font-weight: 500;
 }
 
 a {
     color: #0088cc;
     text-decoration: none;
+    font-weight: 600; 
 }
 
 a:hover {
@@ -46,7 +67,7 @@ a:hover {
 nav {
     margin-bottom: 20px;
     background-color: #FFF7E6;
-    padding: 10px;
+    padding: 12px;
     border-radius: 10px;
     border: 1.5px solid #ff7b15;
     text-align: center;
@@ -55,6 +76,7 @@ nav {
 nav a {
     margin-right: 15px;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
 nav a:last-child {
@@ -74,8 +96,11 @@ footer {
     bottom: 10px;
     right: 10px;
     padding: 8px 16px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #fc4c00;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .team-gallery {
@@ -254,7 +279,7 @@ li a:hover {
 }
 
 #math-form input {
-    padding: 10px;
+    padding: 12px;
     font-size: 1.1rem;
     border-radius: 8px;
     border: 1px solid #ff7b15;
@@ -263,21 +288,24 @@ li a:hover {
 }
 
 #math-form button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 1.1rem;
-    background-color: lightcoral;
+    background-color: #ff7b15;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-family: 'EB Garamond', serif;
+    font-weight: bold;
 }
 
 #math-form button:hover {
-    background-color: lightpink;
+    background-color: #fc4c00;
 }
 
 #feedback {
     margin-top: 20px;
     font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
 }
